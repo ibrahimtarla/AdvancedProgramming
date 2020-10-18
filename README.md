@@ -7,8 +7,8 @@ Java Script
    1. AnalyzeOfSaling [CW3](https://ibrahimtarla.github.io/Advanced_Programming/CW3/CW3.html)
    
  2.WEEK [CW2](https://github.com/ibrahimtarla/Advanced_Programming_With_Java_Script/CW2)
-   1. Converter [CW2-Lenght_Converter](https://ibrahimtarla.github.io/Advanced_Programming_With_Java_Script/CW2/Lenght_Converter.html)
-   1. Arttırıcı [CW2-Counting](https://ibrahimtarla.github.io/Advanced_Programming_With_Java_Script/CW2/Counting_HW2.html)
+   1. Converter [CW2-Lenght_Converter](https://ibrahimtarla.github.io/Advanced_Programming/CW2/Lenght_Converter.html)
+   1. Arttırıcı [CW2-Counting](https://ibrahimtarla.github.io/Advanced_Programming/CW2/Counting_HW2.html)
    
  
  HOMEWORKS
