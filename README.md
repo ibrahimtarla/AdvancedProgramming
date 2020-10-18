@@ -1,5 +1,4 @@
 # AdvancedProgramming
-Java Script
 # İbrahim_Tarla's Java Script Projectes 
   
  3.WEEK
