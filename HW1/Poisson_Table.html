@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Poisson Table</title>
+    <style>
+        label {
+            display: block;
+        }
+        table,
+        td,
+        tr {
+            border: 0.5px solid #4ec719;
+            color: rgb(89, 0, 255);
+        }
+    </style>
+</head>
+
+<body>
+    <label>Satır Sayısı</label>
+    <input type="text" id="satir" required>
+    <label><button id="olustur">Make Table</button></label>
+    <div id="goster"></div>
+    <b>Sample code</b>
+    <pre id=sample></pre>
+    <script>
+        const L = [0.5, 1, 1.5, 2, 2.5, 3];
+        var f = [];
+        function factorial(n) {
+            if (n == 0 || n == 1)
+                return 1;
+            if (f[n] > 0)
+                return f[n];
+            return f[n] = factorial(n - 1) * n;
+        }
+        function p1(b) {
+            return L[b];
+        }
+        function compute(e, f) {
+            c = Math.exp(-p1(f)) * Math.pow(p1(f), e) / factorial(e);
+            return c.toFixed(4);
+        }
+        function p2(a, b) {
+            a = Math.exp(-p1(b)) * Math.pow(p1(b), a) / factorial(a);
+            return a;
+        }
+        function make() {
+            var olustur = document.getElementById("olustur");
+            olustur.onclick = function () {
+                var satir = document.getElementById("satir").value;
+                var sutun = L.length;
+                var table = document.createElement("table");
+                var t3 = document.createElement("tr");
+                t3.innerHTML = "Num:";
+                for (var z = 0; z < L.length; z++) {
+                    t3.innerHTML += "λ=" + L[z];
+                    for (var k = 0; k < (L.length - 1); k++) {
+                        t3.innerHTML += "&nbsp";
+                    }
+                }
+                table.append(t3);
+                for (var i = 0; i < satir; i++) {
+                    var tr = document.createElement("tr");
+                    tr.innerHTML = "x= " + i;
+                    t3.appendChild(tr);
+                    for (var j = 0; j < sutun; j++) {
+                        var td = document.createElement("td");
+                        td.innerHTML = p2(i, j).toFixed(4);
+                        tr.appendChild(td);
+                    }
+                }
+                document.getElementById("goster").innerHTML = "";
+                document.getElementById("goster")
+                    .appendChild(table);
+                sample.innerText = make.toString();
+            }
+        }
+        make();
+    </script>
+</body>
+</html>
