@@ -1,6 +1,11 @@
 # AdvancedProgramming
 # İbrahim_Tarla's Java Script Projectes 
  
+   6.WEEK
+   1.  Getting Local Infornmations  [CW6](https://ibrahimtarla.github.io/Advanced_Programming_With_Java_Script/CW6/CW6.html)
+   2.  Scrren Shoot [CW6](https://ibrahimtarla.github.io/Advanced_Programming_With_Java_Script/CW6/CW6.PNG) 
+       
+ 
   4.WEEK
    1.  List of Objects  [CW4](https://ibrahimtarla.github.io/Advanced_Programming_With_Java_Script/CW4/ObjectList.html) 
   
