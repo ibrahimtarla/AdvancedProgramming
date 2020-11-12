@@ -1,0 +1,82 @@
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+
+<script>
+"use strict";
+function elt(type, ...list) {
+  let e = document.createElement(type)
+  for (let c of list) {
+    e.appendChild(c instanceof Element? c
+             : document.createTextNode(c))
+  }
+  return e
+}
+
+function makePage() {
+
+ 
+  
+  let out=elt("p")
+  out.id="out"
+out.style="font-size:18"
+out.style=" background: blue;"
+out.style=" color: red"        
+out.style=  "padding: 10px"
+
+
+  let input=elt("input")
+  input.type="number"
+  input.id="inp"
+  input.value=1
+  input.onchange="out.innerText=value"
+
+  out.innerHTML=increment(input.value);
+  let input2=elt("input","Arttır")
+  input2.innerHTML="Arttır"
+  input2.type="button"
+  input2.onclick=increment(input.value)
+  input2.style="width: 50px"
+
+  out.value=increment(input.value)
+
+
+  let bold = elt("b", "Sample code")
+  let pre  = elt("pre", makePage)
+  
+  document.title = "Counter"
+  document.body = elt("body", 
+      elt("h2", "Counter"), 
+      elt("hr"), 
+      
+      elt("div",input,input2),
+      elt("p",out),
+      elt("div", bold, pre), 
+    
+     
+      elt("hr")
+    )
+  document.body.style.maxWidth = "420px"
+}
+
+function increment(value) {
+    let c = Number(value)+1
+    console.log("counter = "+c);
+   return c
+}
+const tree = [], SPACE = '&emsp;', MAX = 26;
+function toTree(e, space) {
+  let c = e.firstChild
+  if (!c || c instanceof Element) c = ''
+  else c = SPACE+c.textContent
+  if (c.length>MAX+3) c = c.substring(0, MAX)+'…'
+  console.log(space.length, e.localName, c)
+  tree.push(space+'+ '+e.tagName+c)
+  for (let c of e.children)
+      toTree(c, space+SPACE)
+}
+makePage(); toTree(document.body, '');
+let t = elt("p"); t.style.color = "green";
+t.innerHTML = tree.join('<br>');
+document.body.append(t);
+</script>
+<!-- The document body is made by the script above -->
