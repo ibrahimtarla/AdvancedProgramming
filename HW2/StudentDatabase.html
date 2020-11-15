@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <script src="Database.js"></script>
+    <title>Student Database </title>
+    <script>
+"use strict";
+function getRandomStudent() {
+    let keys = Array.from(data.students.keys());
+    return data.students.get(keys[Math.floor(Math.random() * keys.length)]);
+}
+
+function clear(tbl_id) {
+    let tbl = document.getElementById(tbl_id);
+    tbl.innerHTML = "";
+}
+
+function clearButton(tbl_id) {
+    let tbl = document.getElementById(tbl_id);
+    tbl.innerHTML = "";
+    sIdInput.value="";
+    cCodeInput.value="";
+    gpaInput.value="";
+    eRoomInput.value="";
+}
+
+function addStudentTableHead(tbl_id) {
+
+    let tbl = document.getElementById(tbl_id);
+
+    let head=tbl.insertRow(0);
+
+    let c1 = head.insertCell(0);
+    let c2 = head.insertCell(1);
+    let c3 = head.insertCell(2);
+
+    c1.innerHTML = "ID";
+    c2.innerHTML = "Name";
+    c3.innerHTML = "GPA";
+}
+function addCoursesTableHead(tbl_id) {
+    let tbl = document.getElementById(tbl_id);
+
+    let head =  tbl.insertRow(0);
+
+    let c1 = head.insertCell(0);
+    let c2 = head.insertCell(1);
+    let c3 = head.insertCell(2);
+    let c4 = head.insertCell(3);
+
+    c1.innerHTML = "CODE";
+    c2.innerHTML = "TIME";
+    c3.innerHTML = "DATE";
+    c4.innerHTML = "ROOMS";
+}
+function addStudentTableCoursesHead(tbl_id) {
+    let tbl = document.getElementById(tbl_id);
+    let r1c4 = tbl.rows[0].insertCell(3);
+    r1c4.innerHTML="Courses";
+}
+
+function addTableGivenStudentCourses(student, tbl_id) {
+    let tbl = document.getElementById(tbl_id);
+    addStudentTableCoursesHead(tbl_id);
+    let r2c4 = tbl.rows[1].insertCell(3);
+
+    let select = document.createElement("select");
+    select.size=3;
+    select.disabled="disabled";
+    select.style.width="125px";
+
+
+    for(let course of student.courses){
+        let option = document.createElement("option");
+        option.text=course.name;
+        option.style.color="blue";
+        select.appendChild(option);
+    }
+    r2c4.appendChild(select);
+}
+
+function addTableGivenCourse(course, tbl_id,rowIndex) {
+    let tbl = document.getElementById(tbl_id);
+
+    let head =  tbl.insertRow(rowIndex);
+
+    let c1 = head.insertCell(0);
+    let c2 = head.insertCell(1);
+    let c3 = head.insertCell(2);
+    let c4 = head.insertCell(3);
+
+    c1.innerHTML = course.name;
+    c2.innerHTML = course.time;
+    c3.innerHTML = course.date;
+
+    let select = document.createElement("select");
+    select.size=3;
+    select.disabled="disabled";
+    select.style.width="125px";
+
+
+    for(let room of course.rooms){
+        let option = document.createElement("option");
+        option.text=room.toString();
+        option.style.color="blue";
+        select.appendChild(option);
+    }
+    c4.appendChild(select);
+
+}
+
+function addTableGivenStudent(student,tbl_id,rowIndex=1) {
+
+    let tbl = document.getElementById(tbl_id);
+    let row = tbl.insertRow(rowIndex);
+
+    let c1 = row.insertCell(0);
+    let c2 = row.insertCell(1);
+    let c3 = row.insertCell(2);
+
+    c1.style.width = "100px";
+    c2.style.width = "130px";
+    c3.style.width = "70px";
+
+    c1.innerHTML = student.id;
+    c2.innerHTML = student.name;
+    c3.innerHTML = student.gpa;
+}
+function randomStudentButton() {
+    clear("tbl");
+    addStudentTableHead("tbl");
+
+    let student = getRandomStudent();
+    addTableGivenStudent(student,"tbl");
+}
+
+function getStudentNumberGPA() {
+    clear("tbl");
+    if(gpaInput.value!="") {
+        let tbl = document.getElementById("tbl");
+        let head = tbl.insertRow(0);
+
+        let gpa = gpaInput.value;
+        let count = 0;
+        for (let student of data.students.values()) {
+            let sgp = Number(student.gpa);
+            if (sgp > gpa) {
+                count++;
+            }
+        }
+        head.insertCell(0).innerHTML = "The Number of Students of Given GPA:  " + count;
+    }
+    else{
+        let tbl = document.getElementById("tbl");
+        let row = tbl.insertRow(0);
+        row.insertCell(0).innerHTML = "GPA is Empty!";
+    }
+}
+
+function coursesOfGivenStudentButton() {
+    clear("tbl");
+    if (sIdInput.value != "") {
+
+        addStudentTableHead("tbl");
+
+        let sID = sIdInput.value;
+        let student = data.students.get(sID);
+        addTableGivenStudent(student, "tbl");
+        addTableGivenStudentCourses(student, "tbl");
+    }
+    else{
+        let tbl = document.getElementById("tbl");
+        let row = tbl.insertRow(0);
+        row.insertCell(0).innerHTML = "Student ID is Empty!";
+    }
+}
+
+function examScheduleButton() {
+    clear("tbl");
+    if(sIdInput.value!="") {
+        let student = data.students.get(sIdInput.value);
+        let rowIndex = 1;
+
+        addCoursesTableHead("tbl");
+        for (let course of student.courses) {
+            addTableGivenCourse(course, "tbl", rowIndex);
+            rowIndex++;
+        }
+    }
+    else{
+        let tbl = document.getElementById("tbl");
+        let row = tbl.insertRow(0);
+        row.insertCell(0).innerHTML = "Student ID is Empty!";
+    }
+}
+
+function studentListGivenCourseButton() {
+    clear("tbl");
+    if(cCodeInput.value!="") {
+        addStudentTableHead("tbl");
+        let givenCourse = data.courses.get(cCodeInput.value);
+        let rowIndex = 1;
+        for (let student of data.students.values()) {
+            for (let course of student.courses) {
+                if (course === givenCourse) {
+                    addTableGivenStudent(student, "tbl", rowIndex);
+                }
+            }
+        }
+    }
+    else{
+        let tbl = document.getElementById("tbl");
+        let row = tbl.insertRow(0);
+        row.insertCell(0).innerHTML = "Course Code is Empty!";
+    }
+}
+
+function courseListGivenExamRoomButton() {
+    clear("tbl");
+    if(eRoomInput.value!="") {
+        let examRoom = eRoomInput.value;
+        addCoursesTableHead("tbl");
+        for (let course of data.courses.values()) {
+            for (let room of course.rooms) {
+                if (examRoom == room) {
+                    addTableGivenCourse(course, "tbl");
+                }
+            }
+        }
+    }
+    else{
+        let tbl = document.getElementById("tbl");
+        let row = tbl.insertRow(0);
+        row.insertCell(0).innerHTML = "Exam Room is Empty!";
+    }
+}
+
+function numberOfGivenRoom() {
+    clear("tbl");
+    if(eRoomInput.value!="") {
+        let givenRoom = eRoomInput.value;
+        let count = 0;
+        for (let course of data.courses.values()) {
+            for (let room of course.rooms) {
+                if (room == givenRoom) {
+                    count++;
+                }
+            }
+        }
+
+        let tbl = document.getElementById("tbl");
+        let row = tbl.insertRow(0);
+        let c1 = row.insertCell(0);
+        c1.style.width = "300px";
+        c1.innerHTML = "The Number of Courses in Given Exam Room: " + count;
+    }
+    else{
+        let tbl = document.getElementById("tbl");
+        let row = tbl.insertRow(0);
+        row.insertCell(0).innerHTML = "Exam Room is Empty!";
+    }
+}
+
+
+    </script>
+</head>
+
+<body>
+
+<hr />
+<h2 id=title></h2>
+<hr />
+
+<p><b>Student ID:</b>
+    <input type=number id=sIdInput style="margin-left: 20px">
+</p>
+<p><b>Course Code:</b>
+    <input type=text  id=cCodeInput style="margin-left: 7px">
+</p>
+</p>
+<p><b>GPA:</b>
+    <input  type=number id=gpaInput style="margin-left: 63px">
+</p>
+<p><b>Exam Room:</b>
+    <input type=text  id=eRoomInput style="margin-left: 10px">
+</p>
+
+<hr />
+
+<p><b>Get A Random Student:</b> <button onClick='randomStudentButton()'>Random</button></p>
+<p><b>The Number of Students of Given GPA:</b> <button onClick='getStudentNumberGPA()' style="  margin-left: 20px; ">Get</button></p>
+<p><b>The Courses of Given Student:</b> <button onClick='coursesOfGivenStudentButton()' style=" margin-left: 82px; ">Get</button></p>
+<p><b>The Exam Schedule of Given Student:</b> <button onClick='examScheduleButton()' style="margin-left: 33px; ">Get</button></p>
+<p><b>Student List of Given Course:</b> <button onClick='studentListGivenCourseButton()' style=" margin-left: 89px; ">Get</button></p>
+<p><b>Course List of Given Exam Room:</b> <button onClick='courseListGivenExamRoomButton()' style=" margin-left: 58px; ">Get</button></p>
+<p><b>Number of Courses in Given Room: </b> <button onClick='numberOfGivenRoom()' style="margin-left: 49px; ">Get</button></p>
+<hr />
+
+<button onClick='clearButton("tbl")' style="margin-left: 298px; background-color:#a4b1ea;  font-weight: bold ">Clear</button>
+<br>
+<table id=tbl style="width:500px">
+</table>
+
+<script>
+    title.innerText = document.title;
+    data = new Database();
+</script>
+<style>
+    button{
+        border:0;
+         margin-bottom: -1em;
+         color: rgb(248, 10, 10); 
+         background-color:box-shadow;
+          width: 75px ;
+           height: 20px ; 
+           margin-left:127px;
+           font-weight: bold
+    }
+    </style>
+
+
+</body>
+</html>
