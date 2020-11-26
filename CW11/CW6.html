@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="icon" href="/305/images/icon192.png">
+    <title>Battery Status </title>
+
+  <style> /* CSS comment */
+    body { max-width: 440px; }
+    #url { width: 190px; }
+    span, #url { color: blue; }
+  </style>
+</head>
+
+<body>   <!-- HTML comment: Modify all items marked xxx -->
+
+<h2 id=title title="Modify xxx"></h2>
+
+<p>Dishnarging</p>
+<p title="Battery level">
+  Battery level: <span id=level>??</span>
+</p>
+
+<p title="Remaining ">
+  remaining: <span id=remaining>??</span>
+</p>
+
+<h1>Online Status</h1>
+<p title="status  ">
+   <span id=status>??</span>
+</p>
+
+<h1>KeyBoard</h1>
+<p title="keyBoard  ">
+   <input onkeydown="keydownFunction()" onkeyup="keyupFunction()"></input>
+</p>
+
+<p >
+  <span id=keyBoard>??</span>
+</p>
+
+
+
+<hr />
+<b>Sample code</b>
+<pre id=sample>This text is not shown. Why?</pre>
+
+<hr />
+
+<script>
+"use strict";
+
+function keydownFunction() {
+    
+    var x = document.getElementById("keyboard");
+    x.innerHTML="Shift A";
+
+}
+
+
+
+function init() {
+
+    navigator.getBattery().then(b => 
+      level.innerText = 100*b.level+'%'
+    )
+
+
+    navigator.getBattery().then(b => 
+     
+       remaining.innerText=Math.round(b.dischargingTime / 60)
+    )
+
+    if(navigator.onLine){
+      document.getElementById("status").innerHTML = "connected-online";
+    }
+    else{
+      document.getElementById("status").innerHTML = "disConnected-ofline";
+    }
+    keydownFunction()
+
+}
+    title.innerText = document.title;
+    sample.innerText = init+'\n'+init;
+    init();
+</script>
+
+</body>
+</html>
