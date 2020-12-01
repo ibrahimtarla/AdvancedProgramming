@@ -1,6 +1,12 @@
 # AdvancedProgramming
 # İbrahim_Tarla's Java Script Projectes 
  
+   
+   8.WEEK
+   1.  Remote And Local Files [CW8](https://ibrahimtarla.github.io/Advanced_Programming_With_Java_Script/CW8/Files.html)
+   2.  Scrren Shoot [CW8-Img](https://ibrahimtarla.github.io/Advanced_Programming_With_Java_Script/CW8/CW8_1.PNG)
+   3.  Scrren Shoot [CW8-Img](https://ibrahimtarla.github.io/Advanced_Programming_With_Java_Script/CW8/CW8_2.PNG)
+   
    6.WEEK
    1.  Getting Local Infornmations  [CW6](https://ibrahimtarla.github.io/Advanced_Programming_With_Java_Script/CW6/CW6.html)
    2.  Scrren Shoot [CW6-Img](https://ibrahimtarla.github.io/Advanced_Programming_With_Java_Script/CW6/CW6.PNG)
@@ -8,6 +14,10 @@
    4.  Scrren Shoot Of Student Data Base[CW6-Img](https://ibrahimtarla.github.io/Advanced_Programming_With_Java_Script/CW6/CW6_2.PNG)
        
  
+  5.WEEK
+   1.  Data Analyze  [CW5-Data-Analyze](https://ibrahimtarla.github.io/Advanced_Programming_With_Java_Script/CW5/CW5_3.html)
+   2.  Lenght Converter [CW5-Lenght-Converter](https://ibrahimtarla.github.io/Advanced_Programming_With_Java_Script/CW5/Lenght_Converter.html)
+   
   4.WEEK
    1.  List of Objects  [CW4](https://ibrahimtarla.github.io/Advanced_Programming_With_Java_Script/CW4/ObjectList.html) 
   
