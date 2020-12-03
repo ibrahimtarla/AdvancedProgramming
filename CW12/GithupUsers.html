@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width">
+  <link rel="icon" sizes="192x192" href="https://github.com/maeyler/JS/blob/master/images/JS.png">
+  <title>GitHub Users</title>
+
+  <style>
+    body {
+      max-width: 440px;
+    }
+
+    #out {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    img {
+      padding-right: 12px;
+      width: 300px;
+    }
+
+    .button {
+      background: rgb(255, 80, 124);
+      padding: 10px;
+    }
+
+    .button:hover {
+      background: rgb(62, 62, 75);
+      color: white;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h2 id=title></h2>
+  <input type=text id=usr value=maeyler onChange="readUser()">
+  <p id=out></p>
+  <p>Ref: <a href="https://developer.github.com/v3/#rate-limiting" target=NewTab>GitHub Developer</a>
+  </p>
+
+  <script>
+    "use strict";
+    const NL = "\n", BR = "<BR>",
+      URL = "https://api.github.com/users/"
+    function error(t) {
+      out.style.color = 'red'
+      out.innerText = t; console.log(t)
+    }
+
+    function userData(u) {
+      console.log(u);
+      if (!u || !u.login) {
+        error(usr.value + ' not found')
+        return
+      }
+      //u.login is the same as usr.value
+      out.style.color = ''
+      out.innerHTML = ''
+      //start with a tiny image
+      let i = document.createElement("img")
+      i.src = u.avatar_url
+      i.align = "center"
+      out.appendChild(i)
+      //add name and location
+      //let s = (u.name? u.name : u.login)
+      let s = ` ${u.login}`
+      let mail = (u.email ? u.email : "Could not get e-mail")
+      if (u.location) s += BR + BR + u.company + BR + u.location + BR + mail
+      out.innerHTML += BR + u.name + BR + s + BR; console.log(s)
+      //add link to GitHub 
+      let h = u.blog
+      let a = document.createElement("a")
+      a.href = h
+      a.target = "NewTab"
+      a.innerText = h
+      out.appendChild(a)
+
+    }
+
+    function toggle() {
+      let display = toggleDiv.style.display;
+      console.log(display);
+      toggleDiv.style.display = display == 'none' ? 'block' : 'none';
+    }
+
+    function readUser() {
+      fetch(URL + usr.value)
+        .then(r => r.ok ? r.json() : null)
+        .then(userData).catch(error)
+    }
+
+    title.innerText = document.title
+    out.innerText = "Reading data"
+    readUser()
+  </script>
+
+</body>
+
+</html>
