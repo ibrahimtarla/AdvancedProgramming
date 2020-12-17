@@ -77,8 +77,6 @@
     </div>
     <hr />
 
-    <input type="text" placeholder="Place enter latitude and longitude with ',' "
-        id="locInput"><br><br>
     <div id="map">
 
         <div>
@@ -92,11 +90,7 @@
 
     </div>
 
-
-
-    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=&v=weekly" defer></script>
-
-
+    <script src="https://maps.google.com/maps/api/js?key=AIzaSyDDuGt0E5IEGkcE6ZfrKfUtE9Ko_de66pA"></script>
 
     <script>
         "use strict";
@@ -144,17 +138,6 @@
 
         async function askWeather() {
             console.log(lat, lon);
-
-            let val = document.getElementById("locInput").value;
-
-            if(val!=null){
-
-                let arr = val.split(',');
-            lat = arr[0];
-            lon = arr[1];
-            }        
-
-            
             const U = "https://api.openweathermap.org/data/2.5/weather?"
             let url = U + "lat=" + lat + "&lon=" + lon + "&APPID=" + accessKey;
             hava.innerText = "getting weather"
@@ -162,9 +145,7 @@
             gunes.innerText = ''
 
             let data = await toJSON(url)
-            //  fetch(url).then(r => r.json()).then(showWeather)
-            // }
-            // function showWeather(data) {
+
             let w = data.weather[0]; showIcon(w.icon)
             let celsius = convert(data.main.temp).toFixed(0)
             let hh = w.main + "  " + celsius + "°", { sys } = data
@@ -191,53 +172,19 @@
 
             map = new google.maps.Map(document.getElementById('map'), { zoom: 10, center: { lat: lat, lng: lon }, mapTypeId: 'roadmap', disableDefaultUI: true });
 
+
+            var myLatlng = new google.maps.LatLng(lat, lon);
+
+
+            var marker = new google.maps.Marker({
+
+                position: myLatlng,
+                tittle: "My Location"
+            });
+
+            marker.setMap(map);
+
         }
-
-
-
-       /* function askLoc() {
-
-
-            let l = document.getElementById("locInput").value;
-            let arr = l.split(',');
-            lat = arr[0];
-            lon = arr[1];
-
-            console.log(lat, lon);
-            const U = "https://api.openweathermap.org/data/2.5/weather?"
-            let url = U + "lat=" + lat + "&lon=" + lon + "&APPID=" + accessKey;
-            hava.innerText = "getting weather"
-            detay.innerText = ''
-            gunes.innerText = ''
-
-            let data = await toJSON(url)
-            //  fetch(url).then(r => r.json()).then(showWeather)
-            // }
-            // function showWeather(data) {
-            let w = data.weather[0]; showIcon(w.icon)
-            let celsius = convert(data.main.temp).toFixed(0)
-            let hh = w.main + "  " + celsius + "°", { sys } = data
-            let yy = data.name + ', ' + sys.country
-            hava.innerText = hh; yer.innerText = yy
-            console.log(hh, yy); console.log(sys)
-            lat = data.coord.lat; lon = data.coord.lon
-
-
-            mapApi(lat, lon);
-
-            console.log(data.country);
-            let loc = "[" + lat.toFixed(2) + ", " + lon.toFixed(2) + "]"
-            detay.innerText = hh + '\n' + yy + '\n' + loc
-                + '\nWind  ' + data.wind.speed + ' m/s'
-                + '\nPressure ' + data.main.pressure + ' hpa'
-                + '\nHumidity ' + data.main.humidity + '%'
-            let { sunrise, sunset } = sys, noon = (sunrise + sunset) / 2
-            gunes.innerText = 'Rise ' + toHM(sunrise, 1)
-                + '\nNoon ' + toHM(noon, 1) + '\nSet  ' + toHM(sunset, 1)
-
-        }*/
-
-
 
         function showIcon(i) {
             const URL = "https://openweathermap.org/img/w/"
