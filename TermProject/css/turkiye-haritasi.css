@@ -3,6 +3,8 @@
   max-width: 1140px;
   margin: 0 auto;
   text-align: center;
+  width: 100%;
+  height: auto;
 }
 .svg-turkiye-haritasi svg {
   width: 100%;
@@ -21,9 +23,12 @@
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
+  width: 100%;
+  height: auto;
+  
 }
 #svg-turkiye-haritasi path {
-  cursor: pointer;
+  
   fill: rgb(7, 18, 173);
 }
 #svg-turkiye-haritasi path:hover {
@@ -31,4 +36,43 @@
 }
 #guney-kibris {
   pointer-events: none;
+}
+
+
+@media (max-width: 400x) { 
+  .il-isimleri div {
+    font-family: 'Open Sans';
+    display: inline-block;
+    background: #0e2d46;
+    color: #fff;
+    padding: 8px 16px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    width: 50%;
+    height: 50%;
+    
+  }
+
+}
+
+#baslik {
+  color:rgb(7, 18, 173);
+}
+#baslik:hover{
+  color: #e20606;
+}
+p{
+  color:  rgb(7, 18, 173);
+}
+#link{
+  color:  rgb(7, 18, 173);
+}
+
+#link:hover{
+  color: #e20606;
+}
+
+p:hover{
+  color: #e20606;
 }
