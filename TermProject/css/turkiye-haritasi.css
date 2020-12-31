@@ -39,23 +39,6 @@
 }
 
 
-@media (max-width: 400x) { 
-  .il-isimleri div {
-    font-family: 'Open Sans';
-    display: inline-block;
-    background: #0e2d46;
-    color: #fff;
-    padding: 8px 16px;
-    -webkit-border-radius: 4px;
-    -moz-border-radius: 4px;
-    border-radius: 4px;
-    width: 50%;
-    height: 50%;
-    
-  }
-
-}
-
 #baslik {
   color:rgb(7, 18, 173);
 }
