@@ -33,5 +33,5 @@
  HOMEWORKS
   1. Poisson Table [HW1](https://ibrahimtarla.github.io/Advanced_Programming_With_Java_Script/HW1/Poisson_Table.html)
   2. Student Database [HW2](https://ibrahimtarla.github.io/Advanced_Programming_With_Java_Script/HW2/StudentDatabase.html)
-  3. 2. YüzerAydin Law Firm [Law-Firm](https://ibrahimtarla.github.io/Advanced_Programming_With_Java_Script/yüzeraydin/index.html)
+  3. YüzerAydin Law Firm [Law-Firm](https://ibrahimtarla.github.io/Advanced_Programming_With_Java_Script/yüzeraydin/index.html)
     
