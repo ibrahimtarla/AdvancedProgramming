@@ -27,6 +27,9 @@
   <link href="css/style.css" rel="stylesheet" />
   <!-- responsive style -->
   <link href="css/responsive.css" rel="stylesheet" />
+  <!--Custom H1 Style Css -->
+  <link href="css/customcss.css" rel="stylesheet" />
+
 </head>
 
 <body>
@@ -47,13 +50,13 @@
                 Location
               </span>
             </a>
-            <a href="">
-              <i class="fa fa-phone" aria-hidden="true"></i>
+            <a href="tel:+905005005050">
+              <i class="fa fa-phone" aria-hidden="false"></i>
               <span>
                 Ara : +01 123455678990
               </span>
             </a>
-            <a href="eng/index.html">
+            <a href="">
               <i class="fa fa-language" aria-hidden="true"></i>
               <span>
                 English
@@ -69,6 +72,8 @@
               <span>
                 Yüzer&Aydın
               </span>
+              <br>
+             
             </a>
 
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -113,16 +118,27 @@
               <div class="row">
                 <div class="col-lg-8 col-md-9 offset-md-1">
                   <div class="detail-box">
-                    <h1>
+                    <h6>
                       Yüzer & Aydın Hukuk Danışmanlık <br>
-                      
+                    </h6>
+                    <h1 id="H1Grey" >
+                              Hoş 
+                              <span id="H1White"> Geldiniz</span>
                     </h1>
-                    <p>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio omnis fugit, sed tempora praesentium commodi error, hic recusandae repudiandae neque ad molestias, atque veritatis labore quae eveniet autem in
-                    </p>
+                    <!-- <h1 style="color: #cdba6d;">
+                      <span style="color: aliceblue;"> Size</span> 
+                      Nasıl Yardımcı
+                      <span style="color: aliceblue;"> Olabiliriz ?</span>
+                    </h1> -->
+                    <h1 id="H1Grey">
+                      <span id="H1White"> Size</span> 
+                      Nasıl Yardımcı
+                      <span id="H1White"> Olabiliriz ?</span>
+                    </h1>
+                
                     <div class="btn-box">
-                      <a href="" class="btn1">
-                        Contact Us
+                      <a href="#googleMap" class="btn1">
+                        İletişime Geç
                       </a>
                     </div>
                   </div>
@@ -135,16 +151,20 @@
               <div class="row">
                 <div class="col-lg-8 col-md-9 offset-md-1">
                   <div class="detail-box">
-                    <h1>
-                      We Are Best <br>
-                      Law Firm
+                    <h6> Uzman Kadro</h6>
+                    <h1 id="H1White">
+                      İşinde 
+                      <span id="H1Grey">Uzman</span>
+                       <br>
+                      <span id="H1Grey"> Avukatlar </span>
                     </h1>
                     <p>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio omnis fugit, sed tempora praesentium commodi error, hic recusandae repudiandae neque ad molestias, atque veritatis labore quae eveniet autem in
+                      Avukatlarımız işinde profesyonellikte ve sizin vekaletinizi layıkıyla kullanarak sizi hiç bir konuda
+                      mağdur etmeyecek titizlikte çalışmaktadır.
                     </p>
                     <div class="btn-box">
-                      <a href="" class="btn1">
-                        Contact Us
+                      <a href="#teamLaw" class="btn1">
+                        Avukatlarımız
                       </a>
                     </div>
                   </div>
@@ -157,17 +177,28 @@
               <div class="row">
                 <div class="col-lg-8 col-md-9 offset-md-1">
                   <div class="detail-box">
-                    <h1>
-                      We Are Best <br>
-                      Law Firm
+                    <h1 id="H1White">
+                      Telefon
+                      <span id="H1Grey"> İle Destek</span>
+                       <br>
+                       <span id="H1Grey">Almak</span>
+                       <span id="H1White"> İster misiniz ?</span>
                     </h1>
                     <p>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio omnis fugit, sed tempora praesentium commodi error, hic recusandae repudiandae neque ad molestias, atque veritatis labore quae eveniet autem in
+                      Bir Telefon Uzağınızdayız
                     </p>
                     <div class="btn-box">
-                      <a href="" class="btn1">
-                        Contact Us
+
+                      <a href="tel:+905005005050">
+                        <i class="fa fa-phone" aria-hidden="true"></i>
+                        <span>
+                          Ara : +01 123455678990
+                        </span>
                       </a>
+
+                      <!-- <a href="" class="btn1">
+                        Contact Us
+                      </a> -->
                     </div>
                   </div>
                 </div>
@@ -198,7 +229,7 @@
       <div class="container ">
         <div class="heading_container">
           <h2>
-            <span class="dot_design"></span> Our Services
+            <span class="dot_design"></span> Hizmetlerimiz
           </h2>
           <p>
             There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration
@@ -336,7 +367,7 @@
       <div class="detail-box col-lg-10 px-0 mx-auto">
         <div class="heading_container heading_center">
           <h2 class="">
-            <span class="dot_design"></span> About Us
+            <span class="dot_design"></span> Hakkımzıda
           </h2>
         </div>
         <p class="detail_p_mt">
@@ -355,11 +386,11 @@
 
   <section class="team_section layout_padding">
     <div class="container">
-      <div class="heading_container heading_center">
+      <div  class="heading_container heading_center">
         <h2>
-          <span class="dot_design"></span> Our Team
+          <span  class="dot_design"></span> Avukatlarımız
         </h2>
-        <p>
+        <p id="teamLaw">
           Lorem ipsum dolor sit amet, non odio tincidunt ut ante, lorem a euismod suspendisse vel, sed quam nulla mauris
           iaculis. Erat eget vitae malesuada, tortor tincidunt porta lorem lectus.
         </p>
@@ -508,7 +539,7 @@
           <div class="form_container mb_mobile_45 pr-xl-5">
             <div class="heading_container heading_center ">
               <h2 class="">
-                <span class="dot_design"></span> Get In Touch
+                <span class="dot_design"></span> Bizim İle İletişime Geçin
               </h2>
             </div>
             <form action="#" class="contact_form">
@@ -532,7 +563,7 @@
 
   <!-- client section -->
 
-  <section class="client_section layout_padding">
+  <!-- <section class="client_section layout_padding">
     <div class="container ">
       <div class="heading_container heading_center">
         <h2>
@@ -646,7 +677,7 @@
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
 
   <!-- end client section -->
 
@@ -661,7 +692,7 @@
             <div class="info_detail">
               <a href="index.html">
                 <h4>
-                  Octort
+                  Yüzer Aydın Hukuk Danışmanlık
                 </h4>
               </a>
               <p>
@@ -735,7 +766,7 @@
     <div class="container">
       <p>
         &copy; <span id="displayYear"></span> All Rights Reserved By
-        <a href="https://html.design/">Free Html Templates</a>
+        <a >İbrahim TARLA</a>
       </p>
     </div>
   </footer>
