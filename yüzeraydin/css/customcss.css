@@ -1,8 +1,36 @@
 #H1Grey{
     color: #cdba6d;
     font-size: 3rem;
+    font-family: 'Century Schoolbook', sans-serif;
+                                                
 }
 #H1White{
     color: aliceblue;
-    font-size: 3rem;
+    font-size: 2.7rem;
+    font-family: 'Century Schoolbook', sans-serif;
+                                    
 }
+.ornek{
+    width: 900px;
+    margin:auto;
+    }
+    .sola-kaydir{
+    float:left;
+    padding:0 10px 10px 0;
+    width: auto;
+    }
+#headerImg{
+    width:"60px";
+    height:"10%";
+    float: left;
+}
+#logo1{
+    margin-left:12px ; color: #ffc107;
+}
+#logo2{
+    font-size: 12px;  float: left; margin-left: 50px;  color: #ffc107;
+}
+#hizmetMetin{
+    text-align: justify;
+    text-indent:50px;
+}     
