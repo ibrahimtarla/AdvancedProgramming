@@ -33,4 +33,12 @@
 #hizmetMetin{
     text-align: justify;
     text-indent:50px;
+    font-family: "Trebuchet MS", Helvetica, sans-serif
+}
+
+#hizmetImage{
+    width: 60%; 
+    height: 40%; 
+    float: left; 
+    padding:0 10px 10px 0;
 }     
