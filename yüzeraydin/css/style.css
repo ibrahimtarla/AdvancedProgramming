@@ -364,7 +364,7 @@ a:focus {
 .slider_section .detail-box h1 {
   font-weight: 600;
   margin-bottom: 15px;
-  color: #ffffff;
+  color: black;
 }
 
 .slider_section .detail-box a {
@@ -466,6 +466,9 @@ a:focus {
   background-color: #f3f4f5;
   margin-top: 25px;
   padding: 25px 15px 15px 55px;
+}
+.service_section .box .detail-box p {
+  color: black;
 }
 
 .service_section .box .detail-box h5 {
