@@ -21,7 +21,7 @@ body {
   padding-top: 60px; }
   @media (max-width: 1024px) {
     .slider-cont {
-      padding-top: 72px; } }
+      padding-top: 60px; } }
   .slider-cont .owl-carousel-home .item {
     position: relative; }
     .slider-cont .owl-carousel-home .item img {

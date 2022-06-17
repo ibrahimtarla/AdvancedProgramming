@@ -139,7 +139,7 @@
     display: inline-block;
     width: 20px;
     height: 20px;
-    background-color: #ecbb72;
+    background-color: red;
     border-radius: 100%;
   }
   
@@ -148,6 +148,7 @@
         -ms-flex-align: center;
             align-items: center;
     text-align: center;
+    background-color:#ecbb72
   }
 
   .about_section {
@@ -626,4 +627,26 @@
   font-feature-settings: "kern" 1;
   font-kerning: normal;
   font-weight: 400;
+}
+#hizmetMetin{
+  text-align: justify;
+  text-indent:50px;
+  font-family: "Trebuchet MS", Helvetica, sans-serif
+}
+
+.survey #ss:hover{
+  color: red;
+  text-decoration: underline;
+}
+.navbar2 a:hover{
+  color: #ecbb72;
+  text-decoration: underline;
+}
+#ss:hover{
+  color: white;
+  text-decoration: underline;
+}
+#ss {
+  color: red;
+  text-decoration: underline;
 }
