@@ -54,7 +54,8 @@ header {
         position: relative;
         cursor: pointer; 
         color: #ecbb72;
-        font-family: 'Comic Sans MS','cursive','sans-serif';
+        /* font-family: 'Comic Sans MS','cursive','sans-serif'; */
+        font-family: 'Ink Free';
       
       }
         .navbar ul li a:hover {
