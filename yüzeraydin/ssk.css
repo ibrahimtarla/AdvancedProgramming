@@ -49,7 +49,7 @@
   }
   
   .service_section .box .detail-box a {
-    color: #eab465;
+    color: red;
     font-weight: 500;
   }
   
@@ -58,9 +58,12 @@
   }
   
   .service_section .box:hover .img-box img {
-    -webkit-filter: invert(14%) sepia(72%) saturate(584%) hue-rotate(309deg) brightness(101%) contrast(85%);
-            filter: invert(14%) sepia(72%) saturate(584%) hue-rotate(309deg) brightness(101%) contrast(85%);
-  }
+    /* -webkit-filter: invert(14%) sepia(72%) saturate(584%) hue-rotate(309deg) brightness(101%) contrast(85%);
+            filter: invert(14%) sepia(72%) saturate(584%) hue-rotate(309deg) brightness(101%) contrast(85%); */
+           
+            -webkit-filter: invert(14%) sepia(72%) saturate(584%) hue-rotate(200deg) brightness(101%) contrast(85%);
+            filter: invert(14%) sepia(72%) saturate(584%) hue-rotate(150deg) brightness(101%) contrast(85%);
+          }
 
   
   .service_section .btn-box {
@@ -76,7 +79,7 @@
   .service_section .btn-box a {
     display: inline-block;
     padding: 10px 45px;
-    background-color: #ecbb72;
+    background-color: green;
     color: #ffffff;
     border-radius: 0px;
     -webkit-transition: all .3s;
@@ -148,7 +151,7 @@
         -ms-flex-align: center;
             align-items: center;
     text-align: center;
-    background-color:#ecbb72
+    background-color:green
   }
 
   .about_section {
@@ -195,7 +198,7 @@
   .about_section .detail-box a {
     display: inline-block;
     padding: 10px 35px;
-    background-color: #ecbb72;
+    background-color: green;
     color: #ffffff;
     border-radius: 0px;
     -webkit-transition: all .3s;
@@ -376,7 +379,7 @@
   .team_section .btn-box a {
     display: inline-block;
     padding: 10px 45px;
-    background-color: #ecbb72;
+    background-color: green;
     color: #ffffff;
     border-radius: 0px;
     -webkit-transition: all .3s;
@@ -656,3 +659,4 @@
 #selectedpage{
   color:white;
 }
+
