@@ -90,8 +90,8 @@ nav.right-menu ul.menu-cont li {
 nav.right-menu ul.menu-cont li a {
   display: inline-block;
   text-decoration: none;
-  /* font-family: 'Comic Sans MS','cursive','sans-serif'; */
-  font-family: 'Ink Free';
+  font-family: 'Comic Sans MS','cursive','sans-serif';
+  /* font-family: 'Ink Free'; */
 
 
   color: #fff; }

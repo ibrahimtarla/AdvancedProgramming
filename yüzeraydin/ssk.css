@@ -79,7 +79,7 @@
   .service_section .btn-box a {
     display: inline-block;
     padding: 10px 45px;
-    background-color: green;
+    background-color: black;
     color: #ffffff;
     border-radius: 0px;
     -webkit-transition: all .3s;
@@ -136,14 +136,14 @@
     position: relative;
     font-weight: bold;
     text-transform: uppercase;
-    color: white;
+    color: black;
   }
   
   .heading_container h2 .dot_design {
     display: inline-block;
     width: 20px;
     height: 20px;
-    background-color: red;
+    background-color: black;
     border-radius: 100%;
   }
   
@@ -152,7 +152,7 @@
         -ms-flex-align: center;
             align-items: center;
     text-align: center;
-    background-color:green
+    background-color:black
   }
 
   .about_section {
@@ -199,7 +199,7 @@
   .about_section .detail-box a {
     display: inline-block;
     padding: 10px 35px;
-    background-color: green;
+    background-color: black;
     color: #ffffff;
     border-radius: 0px;
     -webkit-transition: all .3s;
@@ -323,7 +323,7 @@
   }
   
   .contact .php-email-form button[type="submit"] {
-    background: #5c9f24;
+    background: black;
     border: 0;
     padding: 10px 30px 12px 30px;
     color: #fff;
@@ -380,7 +380,7 @@
   .team_section .btn-box a {
     display: inline-block;
     padding: 10px 45px;
-    background-color: green;
+    background-color: black;
     color: #ffffff;
     border-radius: 0px;
     -webkit-transition: all .3s;
@@ -661,5 +661,8 @@
   color:white;
 }
 #whiteLabel{
+  color: white;
+}
+.h2White{
   color: white;
 }
