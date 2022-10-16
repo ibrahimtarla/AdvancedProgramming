@@ -666,3 +666,7 @@
 .h2White{
   color: white;
 }
+#teamUrl{
+  color: black;
+  text-decoration: none;
+}
