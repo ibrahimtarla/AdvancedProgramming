@@ -9,12 +9,22 @@
     <meta content="" name="description">
 
     <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
+    <link href="../img/favicon.ico" rel="icon">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Roboto:wght@500;700;900&display=swap" rel="stylesheet"> 
+
+<!-- Vendor CSS Files -->
+<link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+<link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+<link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+<link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+<link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+
 
     <!-- Icon Font Stylesheet -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
@@ -84,21 +94,9 @@
             <div class="navbar-nav ms-auto p-4 p-lg-0">
                 <a href="index.html" class="nav-item nav-link">Ana Sayfa</a>
                 <a href="about.html" class="nav-item nav-link active">Hakkımızda</a>
-                <a href="service.html" class="nav-item nav-link">Hizmetlerimiz</a>
-                <!-- <a href="project.html" class="nav-item nav-link">Project</a> -->
-                <!-- <div class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
-                    <div class="dropdown-menu fade-up m-0">
-                        <a href="feature.html" class="dropdown-item">Feature</a>
-                        <a href="quote.html" class="dropdown-item">Free Quote</a>
-                        <a href="team.html" class="dropdown-item">Our Team</a>
-                        <a href="testimonial.html" class="dropdown-item">Testimonial</a>
-                        <a href="404.html" class="dropdown-item">404 Page</a>
-                    </div>
-                </div> -->
+                <a href="service.html" class="nav-item nav-link ">Hizmetlerimiz</a>
                 <a href="contact.html" class="nav-item nav-link">İletişim</a>
             </div>
-            <!-- <a href="" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Hızlı İletişim<i class="fa fa-arrow-right ms-3"></i></a> -->
         </div>
     </nav>
     <!-- Navbar End -->
@@ -107,7 +105,7 @@
     <!-- Page Header Start -->
     <div class="container-fluid page-header py-5 mb-5">
         <div class="container py-5">
-            <h1 class="display-3 text-white mb-3 animated slideInDown">Hakkımızda</h1>
+            <h1 class="display-3 text-white mb-3 animated slideInDown">---</h1>
             <nav aria-label="breadcrumb animated slideInDown">
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a class="text-white" href="index.html">Ana Sayfa</a></li>
@@ -118,177 +116,52 @@
     </div>
     <!-- Page Header End -->
 
-
-    <!-- Feature Start -->
-    <div class="container-xxl py-5">
+    <section id="portfolio-details" class="portfolio-details">
         <div class="container">
-            <div class="row g-5">
-                <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.1s">
-                    <div class="d-flex align-items-center justify-content-between mb-2">
-                        <div class="d-flex align-items-center justify-content-center bg-light" style="width: 60px; height: 60px;">
-                            <i class="fa fa-user-check fa-2x text-primary"></i>
-                        </div>
-                        <h1 class="display-1 text-light mb-0">01</h1>
-                    </div>
-                    <h5>Yaratıcı Kumaş Tasarımları</h5>
+      
+          <div class="row gy-4">
+      
+            <div class="col-lg-8">
+              <div class="portfolio-details-slider swiper-container">
+                <div class="swiper-wrapper align-items-center">
+      
+                    <div class="swiper-slide">
+                        <img src="images/services/h1.png" alt="">
+                      </div>
+      
+                      <div class="swiper-slide">
+                        <img src="images/services/h2.png" alt="">
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="images/services/h3.png" alt="">
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="images/services/h4.png" alt="">
+                      </div>
+                     
                 </div>
-                <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.3s">
-                    <div class="d-flex align-items-center justify-content-between mb-2">
-                        <div class="d-flex align-items-center justify-content-center bg-light" style="width: 60px; height: 60px;">
-                            <i class="fa fa-check fa-2x text-primary"></i>
-                        </div>
-                        <h1 class="display-1 text-light mb-0">02</h1>
-                    </div>
-                    <h5>Kaliteli Hizmet</h5>
-                </div>
-                <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.5s">
-                    <div class="d-flex align-items-center justify-content-between mb-2">
-                        <div class="d-flex align-items-center justify-content-center bg-light" style="width: 60px; height: 60px;">
-                            <i class="fa fa-drafting-compass fa-2x text-primary"></i>
-                        </div>
-                        <h1 class="display-1 text-light mb-0">03</h1>
-                    </div>
-                    <h5>Müşteri Memnuniyeti </h5>
-                </div>
-                <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.7s">
-                    <div class="d-flex align-items-center justify-content-between mb-2">
-                        <div class="d-flex align-items-center justify-content-center bg-light" style="width: 60px; height: 60px;">
-                            <i class="fa fa-headphones fa-2x text-primary"></i>
-                        </div>
-                        <h1 class="display-1 text-light mb-0">04</h1>
-                    </div>
-                    <h5>Anında Destek </h5>
-                </div>
+                <div class="swiper-pagination"></div>
+              </div>
             </div>
+      
+            <div class="col-lg-4">
+              
+              <div class="portfolio-description">
+                <h2>Hakkımızda </h2>
+                <p>
+                   Hakkımızda Detaylar
+                </p>
+              </div>
+            </div>
+      
+          </div>
+      
         </div>
-    </div>
-    <!-- Feature Start -->
+      </section>
 
 
 
-    <!-- About Start -->
-    <div class="container-fluid bg-light overflow-hidden my-5 px-lg-0">
-        <div class="container about px-lg-0">
-            <div class="row g-0 mx-lg-0">
-                <div class="col-lg-6 ps-lg-0" style="min-height: 400px;">
-                    <div class="position-relative h-100">
-                        <img class="position-absolute img-fluid w-100 h-100" src="img/career.png" style="object-fit: cover;" alt="">
-                    </div>
-                </div>
-                <div class="col-lg-6 about-text py-5 wow fadeIn" data-wow-delay="0.5s">
-                    <div class="p-lg-5 pe-lg-0">
-                        <div class="section-title text-start">
-                            <h1 class="display-5 mb-4">Hakkımızda</h1>
-                        </div>
-                        <p class="mb-4 pb-2">Hakkımızda Yazısı Gelecek</p>
-                        <div class="row g-4 mb-4 pb-2">
-                            <!-- <div class="col-sm-6 wow fadeIn" data-wow-delay="0.1s">
-                                <div class="d-flex align-items-center">
-                                    <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-white" style="width: 60px; height: 60px;">
-                                        <i class="fa fa-users fa-2x text-primary"></i>
-                                    </div>
-                                    <div class="ms-3">
-                                        <h2 class="text-primary mb-1" data-toggle="counter-up">1234</h2>
-                                        <p class="fw-medium mb-0">Happy Clients</p>
-                                    </div>
-                                </div>
-                            </div> -->
-                            <!-- <div class="col-sm-6 wow fadeIn" data-wow-delay="0.3s">
-                                <div class="d-flex align-items-center">
-                                    <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-white" style="width: 60px; height: 60px;">
-                                        <i class="fa fa-check fa-2x text-primary"></i>
-                                    </div>
-                                    <div class="ms-3">
-                                        <h2 class="text-primary mb-1" data-toggle="counter-up">1234</h2>
-                                        <p class="fw-medium mb-0">Projects Done</p>
-                                    </div>
-                                </div>
-                            </div> -->
-                        </div>
-                        <!-- <a href="" class="btn btn-primary py-3 px-5">Explore More</a> -->
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- About End -->
-
-
-    <!-- Team Start -->
-    <!-- <div class="container-xxl py-5">
-        <div class="container">
-            <div class="section-title text-center">
-                <h1 class="display-5 mb-5">Team Members</h1>
-            </div>
-            <div class="row g-4">
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="team-item">
-                        <div class="overflow-hidden position-relative">
-                            <img class="img-fluid" src="img/team-1.jpg" alt="">
-                            <div class="team-social">
-                                <a class="btn btn-square" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-square" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-square" href=""><i class="fab fa-instagram"></i></a>
-                            </div>
-                        </div>
-                        <div class="text-center border border-5 border-light border-top-0 p-4">
-                            <h5 class="mb-0">Full Name</h5>
-                            <small>Designation</small>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="team-item">
-                        <div class="overflow-hidden position-relative">
-                            <img class="img-fluid" src="img/team-2.jpg" alt="">
-                            <div class="team-social">
-                                <a class="btn btn-square" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-square" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-square" href=""><i class="fab fa-instagram"></i></a>
-                            </div>
-                        </div>
-                        <div class="text-center border border-5 border-light border-top-0 p-4">
-                            <h5 class="mb-0">Full Name</h5>
-                            <small>Designation</small>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="team-item">
-                        <div class="overflow-hidden position-relative">
-                            <img class="img-fluid" src="img/team-3.jpg" alt="">
-                            <div class="team-social">
-                                <a class="btn btn-square" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-square" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-square" href=""><i class="fab fa-instagram"></i></a>
-                            </div>
-                        </div>
-                        <div class="text-center border border-5 border-light border-top-0 p-4">
-                            <h5 class="mb-0">Full Name</h5>
-                            <small>Designation</small>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
-                    <div class="team-item">
-                        <div class="overflow-hidden position-relative">
-                            <img class="img-fluid" src="img/team-4.jpg" alt="">
-                            <div class="team-social">
-                                <a class="btn btn-square" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-square" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-square" href=""><i class="fab fa-instagram"></i></a>
-                            </div>
-                        </div>
-                        <div class="text-center border border-5 border-light border-top-0 p-4">
-                            <h5 class="mb-0">Full Name</h5>
-                            <small>Designation</small>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> -->
-    <!-- Team End -->
+    <!-- Feature End -->
         
 
     <!-- Footer Start -->
@@ -310,11 +183,14 @@
                 <div class="col-lg-3 col-md-6">
                     <h4 class="text-light mb-4">Hizmetlerimiz</h4>
                     <a class="btn btn-link" href="services/lojistik.html">Lojistik</a>
-                    <a class="btn btn-link" href="services/tekstil.html">Tekstil</a>
-                    <a class="btn btn-link" href="services/ithalat.html">İthalat-İhracat</a>
-                    <a class="btn btn-link" href="services/kargo.html">Uluslararası Kargo</a>
-                    <a class="btn btn-link" href="services/kumas.html">Kumaş Üretimi </a>
-                    <a class="btn btn-link" href="services/kömür.html">Kömür Satışı</a>
+                    <a class="btn btn-link" href="services/kargo.html">Kargo</a>
+                    <a class="btn btn-link" href="services/ithalat.html">İthalat</a>
+                    <a class="btn btn-link" href="services/ihracat.html">İhracat</a>
+                    <a class="btn btn-link" href="services/tekstil.html">Tekstil ve Hazır Giyim </a>
+                    <a class="btn btn-link" href="services/tarım.html">Tarım ve Gıda Tedariği</a>
+                    <a class="btn btn-link" href="services/kömür.html">Dokuma Kumaş İmalatı</a>
+                    <a class="btn btn-link" href="services/danismanlik.html">Danışmanlık ve Pazarlama</a>
+                    <a class="btn btn-link" href="services/ödeme.html">WTPDC</a>
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h4 class="text-light mb-4">Hızlı Erişim</h4>
@@ -322,14 +198,7 @@
                     <a class="btn btn-link" href="service.html">Hizmetlerimiz</a>
                     <a class="btn btn-link" href="contact.html">İletişim</a>
                 </div>
-                <!-- <div class="col-lg-3 col-md-6">
-                    <h4 class="text-light mb-4">Newsletter</h4>
-                    <p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p>
-                    <div class="position-relative mx-auto" style="max-width: 400px;">
-                        <input class="form-control border-0 w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
-                        <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
-                    </div>
-                </div> -->
+             
             </div>
         </div>
         <div class="container">
@@ -363,6 +232,14 @@
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
     <script src="lib/isotope/isotope.pkgd.min.js"></script>
     <script src="lib/lightbox/js/lightbox.min.js"></script>
+
+   <!-- Vendor JS Files -->
+   <!-- <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script> -->
+   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+   <script src="assets/vendor/php-email-form/validate.js"></script>
+   <script src="assets/vendor/purecounter/purecounter.js"></script>
+   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>

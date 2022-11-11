@@ -16,6 +16,16 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Roboto:wght@500;700;900&display=swap" rel="stylesheet"> 
 
+<!-- Vendor CSS Files -->
+<link href="../assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+<link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+<link href="../assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+<link href="../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+<link href="../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+
+
     <!-- Icon Font Stylesheet -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
@@ -110,7 +120,7 @@
 
 
     <!-- Feature Start -->
-    <div class="container-fluid bg-light overflow-hidden px-lg-0" style="margin: 6rem 0;">
+    <!-- <div class="container-fluid bg-light overflow-hidden px-lg-0" style="margin: 6rem 0;">
         <div class="container feature px-lg-0">
             <div class="row g-0 mx-lg-0">
                 <div class="col-lg-6 feature-text py-5 wow fadeIn" data-wow-delay="0.5s">
@@ -129,7 +139,66 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
+
+
+
+    <section id="portfolio-details" class="portfolio-details">
+        <div class="container">
+      
+          <div class="row gy-4">
+      
+            <div class="col-lg-8">
+              <div class="portfolio-details-slider swiper-container">
+                <div class="swiper-wrapper align-items-center">
+      
+                  <div class="swiper-slide">
+                    <img src="../images/services/l1.png" alt="">
+                  </div>
+      
+                  <div class="swiper-slide">
+                    <img src="../images/services/l2.png" alt="">
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="../images/services/l3.png" alt="">
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="../images/services/l4.png" alt="">
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="../images/services/l5.png" alt="">
+                  </div>
+            
+                </div>
+                <div class="swiper-pagination"></div>
+              </div>
+            </div>
+      
+            <div class="col-lg-4">
+              <!-- <div class="portfolio-info">
+                <h3>Proje Detayları </h3>
+                <ul>
+                  <li><strong>Proje Adı</strong>: İstanbul Finans Merkezi Ziraat Kuleleri ve Otoparklar </li>
+                  <li><strong>Müşteri</strong>:Kalyon İnşaat ,Siyahkalem&mustafa Ekşi Adi ortaklığı </li>
+                  <li><strong>Proje Tarihi</strong>:2020-Devam ediyor</li>
+                  
+                </ul>
+              </div> -->
+              <div class="portfolio-description">
+                <h2>Lojistik ve Konteynır Taşımacılığı </h2>
+                <p>
+                    Lojistik ve Konteynır Taşımacılığı Detaylar
+                </p>
+              </div>
+            </div>
+      
+          </div>
+      
+        </div>
+      </section>
+
+
+
     <!-- Feature End -->
         
 
@@ -139,8 +208,8 @@
             <div class="row g-5">
                 <div class="col-lg-3 col-md-6">
                     <h4 class="text-light mb-4">Adres</h4>
-                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Adres Gelecek</p>
-                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>Numara</p>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>123 Street, New York, USA</p>
+                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
                     <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@example.com</p>
                     <div class="d-flex pt-2">
                         <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
@@ -151,12 +220,15 @@
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h4 class="text-light mb-4">Hizmetlerimiz</h4>
-                    <a class="btn btn-link" href="lojistik.html">Lojistik</a>
-                    <a class="btn btn-link" href="tekstil.html">Tekstil</a>
-                    <a class="btn btn-link" href="ithalat.html">İthalat-İhracat</a>
-                    <a class="btn btn-link" href="kargo.html">Uluslararası Kargo</a>
-                    <a class="btn btn-link" href="kumas.html">Kumaş Üretimi </a>
-                    <a class="btn btn-link" href="kömür.html">Kömür Satışı</a>
+                    <a class="btn btn-link" href="../services/lojistik.html">Lojistik</a>
+                    <a class="btn btn-link" href="../services/kargo.html">Kargo</a>
+                    <a class="btn btn-link" href="../services/ithalat.html">İthalat</a>
+                    <a class="btn btn-link" href="../services/ihracat.html">İhracat</a>
+                    <a class="btn btn-link" href="../services/tekstil.html">Tekstil ve Hazır Giyim </a>
+                    <a class="btn btn-link" href="../services/tarım.html">Tarım ve Gıda Tedariği</a>
+                    <a class="btn btn-link" href="../services/kömür.html">Dokuma Kumaş İmalatı</a>
+                    <a class="btn btn-link" href="../services/danismanlik.html">Danışmanlık ve Pazarlama</a>
+                    <a class="btn btn-link" href="../services/ödeme.html">WTPDC</a>
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h4 class="text-light mb-4">Hızlı Erişim</h4>
@@ -164,6 +236,7 @@
                     <a class="btn btn-link" href="../service.html">Hizmetlerimiz</a>
                     <a class="btn btn-link" href="../contact.html">İletişim</a>
                 </div>
+           
             </div>
         </div>
         <div class="container">
@@ -197,6 +270,14 @@
     <script src="../lib/owlcarousel/owl.carousel.min.js"></script>
     <script src="../lib/isotope/isotope.pkgd.min.js"></script>
     <script src="../lib/lightbox/js/lightbox.min.js"></script>
+
+   <!-- Vendor JS Files -->
+   <!-- <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script> -->
+   <script src="../assets/vendor/glightbox/js/glightbox.min.js"></script>
+   <script src="../assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+   <script src="../assets/vendor/php-email-form/validate.js"></script>
+   <script src="../assets/vendor/purecounter/purecounter.js"></script>
+   <script src="../assets/vendor/swiper/swiper-bundle.min.js"></script>
 
     <!-- Template Javascript -->
     <script src="../js/main.js"></script>
