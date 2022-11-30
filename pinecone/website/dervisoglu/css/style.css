@@ -689,3 +689,11 @@
     padding: 0;
   }
   
+
+.baslik{
+    background-color: #0f5132;
+}
+.baslik h2{
+    color: #eee;
+    text-align: center;
+}
