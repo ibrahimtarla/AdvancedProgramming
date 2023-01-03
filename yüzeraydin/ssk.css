@@ -670,3 +670,27 @@
   color: black;
   text-decoration: none;
 }
+.word{
+  text-align: justify;
+  text-transform: capitalize;
+  
+}
+.liste ul {
+  list-style: none;
+}
+
+.liste li {
+  position: relative;
+}
+
+.liste li:before {
+  content: "\25c9";
+  position: absolute;
+  left: -1em;
+  color: red;
+}
+
+.contact h4{
+  color:#064C37 ;
+}
+
