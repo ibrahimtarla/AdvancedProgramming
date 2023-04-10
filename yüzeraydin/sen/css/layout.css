@@ -20,13 +20,13 @@ header {
   width: 100%;
   position: fixed;
   justify-content: space-between;
-  height: 70px;
+  height: 100px;
   align-items: center;
   font-family: "Open Sans", sans-serif;
   font-weight: 600;
   padding: 0 50px;
   z-index: 99;
-  background-color: black; }
+  background-color: #122a46; }
   .navbar2 .logo img {
     max-width: 225px; }
 
